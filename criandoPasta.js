@@ -11,3 +11,10 @@ var __dirname = path.dirname(__filename);
 // await fs.mkdir(path.join(__dirname,'lojas','201','funcionarios'));
 
 console.log(path.join(__dirname, 'lojas', '201', 'funcionarios'));
+
+try{
+    await fs.mkdir(path.join(__dirname, 'lojas', '201', 'funcionarios'));
+}catch(error){
+    console.log(`Erro ao criar ${pasta} código: ${error.code}`);
+}
+
